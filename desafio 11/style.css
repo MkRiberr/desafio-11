@@ -1,0 +1,163 @@
+/* peguei o css do Layout Misto Usando Float e z-index com ajuda do chatgpt pq ele estava invandindo o section de baixo e eu n sabia como resolver perdeo prof */
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.float-container {
+    overflow: hidden;
+}
+
+.left, .center, .right {
+    float: left;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    color: #fff;
+}
+
+.left {
+    width: 25%;
+    background-color: #3498db;
+}
+
+.center {
+    width: 50%;
+    background-color: #2ecc71;
+}
+
+.right {
+    width: 25%;
+    background-color: #e74c3c;
+}
+
+.zindex-container {
+    position: relative;
+    height: 200px;
+}
+
+.box1, .box2, .box3 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+.box1 {
+    background-color: #3498db;
+    z-index: 1;
+    top: 50px;
+    left: 50px;
+}
+
+.box2 {
+    background-color: #2ecc71;
+    z-index: 2;
+    top: 70px;
+    left: 70px;
+}
+
+.box3 {
+    background-color: #e74c3c;
+    z-index: 3;
+    top: 90px;
+    left: 90px;
+}
+
+.misto-container {
+    position: relative;
+}
+
+.float-box {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    color: #fff;
+    line-height: 200px;
+    text-align: center;
+}
+
+.zindex-box1, .zindex-box2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    color: #fff;
+}
+
+.zindex-box1 {
+    background-color: #2ecc71;
+    z-index: 1;
+    top: 50px;
+    left: 50px;
+}
+
+.zindex-box2 {
+    background-color: #e74c3c;
+    z-index: 2;
+    top: 80px;
+    left: 80px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #3498db;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.align-distribute-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.align-distribute-container .box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #3498db;
+    color: #fff;
+}
